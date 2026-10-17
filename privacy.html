@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>NextPuzzle Privacy Policy</title>
+<meta name="description" content="How the NextPuzzle iOS app handles your photos, location, camera effects and sharing.">
+<link rel="icon" href="NextPuzzle.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: single reading column with a section index above the policy text */
+:root {
+  --bg: #161718;
+  --panel: #1d1f20;
+  --line: #2e3133;
+  --fg: #f3f0d8;
+  --muted: #a9ad9f;
+  --beak: #fd7401;
+  --amber: #fec554;
+  --sky: #558c95;
+  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body: "Figtree", "Helvetica Neue", Arial, system-ui, sans-serif;
+  color-scheme: dark;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--bg); scroll-behavior: smooth; scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 1.5rem); }
+body {
+  margin: 0;
+  background:
+    radial-gradient(50rem 30rem at 90% -8%, color-mix(in srgb, var(--beak) 12%, transparent), transparent 60%),
+    var(--bg);
+  color: var(--fg);
+  font: 400 1.0625rem/1.7 var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; }
+
+.wrap {
+  max-width: 46rem; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+header.top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.5rem; }
+.brand { display: flex; align-items: center; gap: .6rem; font: 800 1.2rem/1 var(--display); letter-spacing: -.01em; color: var(--fg); text-decoration: none; }
+.brand img { width: 2.25rem; height: 2.25rem; display: block; }
+.brand b { color: var(--beak); font-weight: 800; }
+.back { color: var(--muted); font-size: .9rem; text-decoration: none; }
+.back:hover { color: var(--amber); }
+
+.intro { padding-block: clamp(2rem, 6vw, 3.5rem) 2rem; border-bottom: 1px solid var(--line); }
+.eyebrow { font-size: .78rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--amber); margin: 0 0 .9rem; }
+h1 { font: 800 clamp(2.25rem, 6vw, 3.5rem)/1 var(--display); letter-spacing: -.03em; margin: 0 0 1.5rem; text-wrap: balance; }
+.meta { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .35rem 1.25rem; margin: 0 0 1.5rem; font-size: .95rem; }
+.meta dt { color: var(--muted); }
+.meta dd { margin: 0; }
+.intro p { margin: 0; color: var(--fg); }
+
+nav.toc { padding-block: 1.75rem; border-bottom: 1px solid var(--line); }
+nav.toc h2 { font: 600 .78rem/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 1rem; }
+nav.toc ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: .5rem 1.5rem; }
+nav.toc a { display: flex; gap: .6rem; color: var(--fg); text-decoration: none; font-size: .95rem; line-height: 1.4; }
+nav.toc a span { color: var(--beak); font-variant-numeric: tabular-nums; min-width: 1.1rem; font-weight: 600; }
+nav.toc a:hover { color: var(--amber); }
+
+article { padding-block: 1rem 3rem; }
+section { padding-block: 2rem .5rem; }
+h2.sec { font: 800 1.45rem/1.2 var(--display); letter-spacing: -.015em; margin: 0 0 1rem; display: flex; gap: .7rem; align-items: baseline; text-wrap: balance; }
+h2.sec span { color: var(--beak); font-variant-numeric: tabular-nums; }
+article p { margin: 0 0 1.1rem; color: color-mix(in srgb, var(--fg) 90%, var(--muted)); }
+article a, .contact a { color: var(--amber); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--amber) 45%, transparent); text-underline-offset: .2em; overflow-wrap: anywhere; }
+article a:hover { text-decoration-color: currentColor; }
+strong { color: var(--fg); font-weight: 600; }
+
+.contact {
+  margin-top: 1.5rem; padding: 1.25rem 1.4rem; border: 1px solid var(--line); border-radius: .9rem;
+  background: var(--panel); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 1rem;
+}
+.contact p { margin: 0; color: var(--muted); font-size: .95rem; }
+.contact .addr { color: var(--fg); font-weight: 600; font-size: 1.05rem; user-select: all; }
+.copy { font: 600 .9rem/1 var(--body); color: var(--bg); background: var(--fg); border: 0; border-radius: .6rem; padding: .65rem 1rem; cursor: pointer; }
+.copy:hover { background: var(--amber); }
+
+a:focus-visible, button:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; border-radius: 3px; }
+
+footer { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem 1.25rem; border-top: 1px solid var(--line); padding-block: 2rem 2.5rem; color: var(--muted); font-size: .9rem; }
+footer a { color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./"><img src="NextPuzzle.png" alt=""><span>Next<b>Puzzle</b></span></a>
+    <a class="back" href="./">← Home</a>
+  </header>
+
+  <div class="intro">
+    <p class="eyebrow">Legal · iOS app</p>
+    <h1>Privacy Policy</h1>
+    <dl class="meta">
+      <dt>Last updated</dt><dd><time datetime="2026-10-17">17 October 2026</time></dd>
+      <dt>Publisher</dt><dd>Enes Eken (NextPuzzle)</dd>
+      <dt>Privacy contact</dt><dd>hello@nextpuzzle.app</dd>
+    </dl>
+    <p>This Privacy Policy explains how the NextPuzzle iOS app handles information when you browse, create, solve, save, or share photo puzzles, use maps, or apply camera effects. “We” and “our” refer to the publisher of NextPuzzle. You can contact us using the email address above.</p>
+  </div>
+
+  <nav class="toc" aria-labelledby="toc-h">
+    <h2 id="toc-h">Sections</h2>
+    <ol>
+      <li><a href="#device-storage"><span>1</span>Information stored on your device</a></li>
+      <li><a href="#camera"><span>2</span>Camera, photos, and AR effects</a></li>
+      <li><a href="#location"><span>3</span>Location, maps, and photo metadata</a></li>
+      <li><a href="#sharing"><span>4</span>Sharing to Snapchat, Instagram, and other apps</a></li>
+      <li><a href="#authentication"><span>5</span>Device authentication and motion</a></li>
+      <li><a href="#providers"><span>6</span>Other processing and service providers</a></li>
+      <li><a href="#retention"><span>7</span>Retention, deletion, and your choices</a></li>
+      <li><a href="#children"><span>8</span>Children and families</a></li>
+      <li><a href="#security"><span>9</span>Security and changes</a></li>
+    </ol>
+  </nav>
+
+  <article>
+    <section id="device-storage">
+      <h2 class="sec"><span>1</span>Information stored on your device</h2>
+      <p>NextPuzzle does not currently require a user account. Photos you choose or capture and save in the app, custom puzzle images and names, associated places, saved game progress, favorites, hidden-item selections, and app preferences are stored in the app’s local storage on your device. NextPuzzle does not operate an account-based photo upload or cloud synchronization service for this content.</p>
+      <p>Device or computer backups may include app data according to your Apple and device settings. Photos you separately save to Apple Photos may also be synchronized by Apple according to your iCloud Photos settings. These services are separate from NextPuzzle’s local storage.</p>
+    </section>
+
+    <section id="camera">
+      <h2 class="sec"><span>2</span>Camera, photos, and AR effects</h2>
+      <p>Camera access is used when you open the camera to take a photo. The system photo picker lets you choose specific images to import. Permission to add images to your photo library is used when you choose to save an exported image. You can manage permissions in iOS Settings. Declining an optional permission leaves features that do not require it available.</p>
+      <p>Photo styles and small style previews are processed on your device. Live preview samples are temporary; taking and saving a photo creates a separate stored image. The current photo-capture feature does not record microphone audio.</p>
+      <p>Optional AR Lenses use Snap’s Camera Kit. Depending on the Lens, camera images and information about a face, head, body, hands, or the surrounding scene may be processed to position an effect or separate a person from the background. NextPuzzle does not use these features to identify a person, build a biometric identity profile, or store a separate database of face measurements. Saved photos can still contain recognizable faces and remain subject to the photo-storage and sharing provisions of this Policy.</p>
+      <p>Camera Kit downloads Lens resources and communicates with Snap services to operate the feature. Snap’s SDK processes technical data such as device identifiers, Lens interactions, and crash/performance diagnostics for functionality and analytics. Its privacy manifest also lists feature-dependent categories including photos/video, precise location, environment scanning, and hand/head movements; availability and processing depend on the features in use. The current travel-background feature is not a location-based Landmarker experience. Snap’s handling of information is described in its <a href="https://values.snap.com/privacy/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+    </section>
+
+    <section id="location">
+      <h2 class="sec"><span>3</span>Location, maps, and photo metadata</h2>
+      <p>Map and place-search features use Apple MapKit and geocoding services. Searches, map regions, and coordinates needed for these requests are processed by Apple under <a href="https://www.apple.com/legal/privacy/data/en/apple-maps/" target="_blank" rel="noopener">Apple Maps &amp; Privacy</a>.</p>
+      <p>If you allow location access, NextPuzzle can request your current location while the app is in use to center the map. The app does not request continuous background location tracking. You may use maps without granting access to your current location.</p>
+      <p>An imported image may include GPS metadata. NextPuzzle can read that information and store a location separately with the image or puzzle. You can also choose, edit, or remove a puzzle’s location in the app. A place or map included in an image/card you choose to share may reveal that location to the recipient.</p>
+    </section>
+
+    <section id="sharing">
+      <h2 class="sec"><span>4</span>Sharing to Snapchat, Instagram, and other apps</h2>
+      <p>Sharing happens when you choose a sharing action. NextPuzzle can prepare an image/card, puzzle title, and associated share text or link for the destination you select. Content you select may contain your face, personal photos, or visible location information.</p>
+      <p>For Snapchat, Creative Kit Lite transfers the selected image/card to Snapchat’s preview using the iOS pasteboard and an app Client ID. You decide whether to send or post it inside Snapchat. NextPuzzle does not use Snap Login Kit or request access to your Snapchat profile, friends, credentials, or private account data.</p>
+      <p>Instagram sharing and the iOS share sheet likewise pass the content you choose to the selected destination. App-to-app handoffs may use the pasteboard or temporary local files. Creative Kit and Instagram pasteboard handoffs are configured to expire after five minutes; a fallback that copies an image to the general clipboard follows the clipboard’s normal behavior. The receiving app, people you share with, and any copies they make are outside NextPuzzle’s local deletion controls. Their respective privacy policies apply.</p>
+    </section>
+
+    <section id="authentication">
+      <h2 class="sec"><span>5</span>Device authentication and motion</h2>
+      <p>Hidden puzzles can be protected using Apple’s local device authentication, including Face ID, Touch ID, or the device passcode as available. NextPuzzle receives an authentication result; it does not receive or store the biometric templates used by Apple for this authentication. Hiding a puzzle changes its visibility and does not delete its image.</p>
+      <p>Device-motion readings may be used locally for visual tilt and lighting effects in the interface. NextPuzzle does not maintain a motion-history profile.</p>
+    </section>
+
+    <section id="providers">
+      <h2 class="sec"><span>6</span>Other processing and service providers</h2>
+      <p>The current app does not include a third-party advertising SDK or an account-based behavioral advertising system operated by NextPuzzle. We do not sell your photos or personal information or use your photos to train our own AI model. Snap services and Apple services have their own data practices as described above; the app should not be understood as making no network requests or processing no data.</p>
+      <p>If you email us, we receive your email address, message, and any attachments you send. We use them to answer your request, provide support, handle privacy questions, and maintain necessary correspondence. Please avoid sending unnecessary personal information or photos.</p>
+      <p>Service providers may process information in countries other than where you live. Refer to the relevant provider’s privacy policy for its processing locations, safeguards, retention, and privacy-request procedures.</p>
+    </section>
+
+    <section id="retention">
+      <h2 class="sec"><span>7</span>Retention, deletion, and your choices</h2>
+      <p>Saved content and settings remain in local app storage until you delete the relevant content, remove the app and its data, or otherwise clear that storage. Removing a puzzle from My List alone may leave the original image in My Images so it can be used again. Deleting an image from My Images removes its associated saved-image data and related custom puzzle/game records. Hiding content is not deletion.</p>
+      <p>Deleting local app data does not remove copies saved to Apple Photos, device/cloud backups, Snapchat, Instagram, or another recipient. You can manage those copies through the corresponding service or device settings. Temporary caches and operating-system-managed files may be removed as storage is reclaimed.</p>
+      <p>Support correspondence is retained only while needed to address the request and meet applicable recordkeeping obligations. Data handled independently by Snap, Apple, or other selected destinations follows their retention policies.</p>
+      <p>You can revoke camera, photo-library, location, and authentication permissions/settings through iOS. Depending on your country, you may have rights to request access, correction, deletion, restriction, objection, portability, or withdrawal of consent, and to complain to the relevant data-protection authority. Contact hello@nextpuzzle.app. We cannot directly retrieve photos that exist only on your device; you can manage them using the app and device controls.</p>
+    </section>
+
+    <section id="children">
+      <h2 class="sec"><span>8</span>Children and families</h2>
+      <p>The puzzle experience is intended for a broad age range. NextPuzzle does not require children to create an account or provide their name, date of birth, or contact details to play. Parents and guardians can manage device permissions and local content, and contact hello@nextpuzzle.app with questions or requests concerning a child’s information.</p>
+      <p>Snapchat and other external sharing services have their own minimum-age and eligibility rules. This Policy does not authorize a child to use a service for which they are ineligible. AR processing and third-party technical data are described above; they should not be interpreted as absent simply because a child uses the app.</p>
+      <p>If you believe a child has provided personal information to us through support correspondence, contact us so we can assess the request and delete information that is no longer needed or must be deleted under applicable law.</p>
+    </section>
+
+    <section id="security">
+      <h2 class="sec"><span>9</span>Security and changes</h2>
+      <p>We use the platform’s app-storage and permission mechanisms to protect information. No storage or transmission method can be guaranteed completely secure. Protect your device, passcode, backups, and the content you choose to share.</p>
+      <p>We may update this Policy when the app or our data practices change. The date above identifies the latest version. Material changes will be communicated through appropriate app or website notices.</p>
+    </section>
+
+    <div class="contact">
+      <div>
+        <p>For privacy questions, contact</p>
+        <span class="addr" id="addr">hello@nextpuzzle.app</span>
+      </div>
+      <button class="copy" id="copy" type="button">Copy email</button>
+    </div>
+  </article>
+
+  <footer>
+    <span>© 2026 NextPuzzle</span>
+    <a href="./">Home</a>
+  </footer>
+</div>
+<script>
+(function () {
+  var btn = document.getElementById('copy');
+  var addr = document.getElementById('addr');
+  function selectText() {
+    try { var r = document.createRange(); r.selectNodeContents(addr); var s = getSelection(); s.removeAllRanges(); s.addRange(r); } catch (e) {}
+  }
+  btn.addEventListener('click', function () {
+    var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy email'; }, 1800); };
+    try {
+      navigator.clipboard.writeText(addr.textContent.trim()).then(done, selectText);
+    } catch (e) { selectText(); }
+  });
+})();
+</script>
+</body>
+</html>
