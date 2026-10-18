@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>NextPuzzle Privacy Policy</title>
 <meta name="description" content="How the NextPuzzle iOS app handles your photos, location, camera effects and sharing.">
-<link rel="icon" href="NextPuzzle.png">
+<link rel="canonical" href="https://nextpuzzle.app/privacy-policy">
+<link rel="icon" type="image/png" href="/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Figtree:wght@400;500;600&display=swap">
@@ -48,7 +49,7 @@ img { max-width: 100%; }
 
 header.top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.5rem; }
 .brand { display: flex; align-items: center; gap: .6rem; font: 800 1.2rem/1 var(--display); letter-spacing: -.01em; color: var(--fg); text-decoration: none; }
-.brand img { width: 2.25rem; height: 2.25rem; display: block; }
+.brand img { width: 2.25rem; height: 2.25rem; display: block; object-fit: contain; }
 .brand b { color: var(--beak); font-weight: 800; }
 .back { color: var(--muted); font-size: .9rem; text-decoration: none; }
 .back:hover { color: var(--amber); }
@@ -96,15 +97,15 @@ footer a { color: var(--muted); }
 <body>
 <div class="wrap">
   <header class="top">
-    <a class="brand" href="./"><img src="NextPuzzle.png" alt=""><span>Next<b>Puzzle</b></span></a>
-    <a class="back" href="./">← Home</a>
+    <a class="brand" href="/"><img src="/logo.png" alt=""><span>Next<b>Puzzle</b></span></a>
+    <a class="back" href="/">← Home</a>
   </header>
 
   <div class="intro">
     <p class="eyebrow">Legal · iOS app</p>
     <h1>Privacy Policy</h1>
     <dl class="meta">
-      <dt>Last updated</dt><dd><time datetime="2026-10-17">17 October 2026</time></dd>
+      <dt>Last updated</dt><dd><time datetime="2026-10-18">18 October 2026</time></dd>
       <dt>Publisher</dt><dd>Enes Eken (NextPuzzle)</dd>
       <dt>Privacy contact</dt><dd>hello@nextpuzzle.app</dd>
     </dl>
@@ -139,6 +140,7 @@ footer a { color: var(--muted); }
       <p>Photo styles and small style previews are processed on your device. Live preview samples are temporary; taking and saving a photo creates a separate stored image. The current photo-capture feature does not record microphone audio.</p>
       <p>Optional AR Lenses use Snap’s Camera Kit. Depending on the Lens, camera images and information about a face, head, body, hands, or the surrounding scene may be processed to position an effect or separate a person from the background. NextPuzzle does not use these features to identify a person, build a biometric identity profile, or store a separate database of face measurements. Saved photos can still contain recognizable faces and remain subject to the photo-storage and sharing provisions of this Policy.</p>
       <p>Camera Kit downloads Lens resources and communicates with Snap services to operate the feature. Snap’s SDK processes technical data such as device identifiers, Lens interactions, and crash/performance diagnostics for functionality and analytics. Its privacy manifest also lists feature-dependent categories including photos/video, precise location, environment scanning, and hand/head movements; availability and processing depend on the features in use. The current travel-background feature is not a location-based Landmarker experience. Snap’s handling of information is described in its <a href="https://values.snap.com/privacy/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+      <p>After the local age check indicates eligibility, Camera Kit may download Lens catalog information, icons, and effect resources and communicate with Snap services before Snap’s terms prompt is accepted. Downloading these resources is separate from activating a Lens effect. Where Snap’s terms prompt is shown, the required terms must be accepted before the effect can be activated.</p>
     </section>
 
     <section id="location">
@@ -178,9 +180,12 @@ footer a { color: var(--muted); }
 
     <section id="children">
       <h2 class="sec"><span>8</span>Children and families</h2>
-      <p>The puzzle experience is intended for a broad age range. NextPuzzle does not require children to create an account or provide their name, date of birth, or contact details to play. Parents and guardians can manage device permissions and local content, and contact hello@nextpuzzle.app with questions or requests concerning a child’s information.</p>
-      <p>Snapchat and other external sharing services have their own minimum-age and eligibility rules. This Policy does not authorize a child to use a service for which they are ineligible. AR processing and third-party technical data are described above; they should not be interpreted as absent simply because a child uses the app.</p>
-      <p>If you believe a child has provided personal information to us through support correspondence, contact us so we can assess the request and delete information that is no longer needed or must be deleted under applicable law.</p>
+      <p>The puzzle experience is intended for a broad age range. An account, name, date of birth, or contact details are not required to play puzzles. Parents and guardians can manage device permissions and local content.</p>
+      <p>Snap Camera Kit Lenses are restricted to users aged 13 and over. Before first access to Lenses, NextPuzzle asks for a birth month and year in a neutral age screen. You can review and correct your selection before confirming it. Until the local check indicates eligibility, NextPuzzle does not initialize Camera Kit or request its Lens catalog or content. If no answer is confirmed, or the check indicates that the user is under 13, Lenses remain unavailable. Puzzles, the normal camera, and on-device photo styles remain available.</p>
+      <p>The entered birth month and year are evaluated on the device and are not retained as entered or transmitted to NextPuzzle or Snap. The app stores a local eligibility decision and, where necessary, the date when access can begin. Because no day of birth is collected, eligibility begins on the first day of the month following the user’s 13th birthday month. The result is remembered on that app installation to avoid repeated questions and immediate resubmission of a different age. This is a self-declared age check, not identity verification or verified parental consent.</p>
+      <p>Eligible users may separately see Snap’s own terms and privacy notice when required by its SDK. Where this prompt is shown, Lens effects cannot be activated until the required terms are accepted. Closing or declining the prompt leaves the effects unavailable.</p>
+      <p>Snapchat and other external sharing services have their own minimum-age and eligibility rules. This Policy does not authorize anyone to use a service for which they are ineligible.</p>
+      <p>For questions or requests concerning a child’s information, contact <a href="mailto:hello@nextpuzzle.app">hello@nextpuzzle.app</a>. If you believe a child has provided personal information through support correspondence, contact us so we can assess the request and delete information that is no longer needed or must be deleted under applicable law.</p>
     </section>
 
     <section id="security">
@@ -200,7 +205,7 @@ footer a { color: var(--muted); }
 
   <footer>
     <span>© 2026 NextPuzzle</span>
-    <a href="./">Home</a>
+    <a href="/">Home</a>
   </footer>
 </div>
 <script>
